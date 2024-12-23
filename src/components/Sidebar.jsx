@@ -34,12 +34,12 @@ const Sidebar = () => {
             isSidebarOpen ? (<img
               src={close}
               alt="close"
-              className="w-[24.5px] h-[26px] cursor-pointer"
+              className="w-[24.5px] h-[20px] cursor-pointer"
               onClick={toggleSidebar}
             />) : (<img
               src={hamburger}
               alt="hamburger"
-              className="w-[24.5px] h-[26px] cursor-pointer"
+              className="w-[24.5px] h-[20px] cursor-pointer"
               onClick={toggleSidebar}
             />)
           }
