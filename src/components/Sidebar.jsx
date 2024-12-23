@@ -63,7 +63,7 @@ const Sidebar = () => {
       <DropdownWithArrow />
         <ul className="mt-7 space-y-3 text-[15px] font-semibold">
           {menuItems.map((item, index) => (
-              <li key={index} className="flex items-center space-x-3">
+              <li key={index} className="flex items-center space-x-3 ">
               <img
                 src={item.icon}
                 alt={item.name}
@@ -79,38 +79,42 @@ const Sidebar = () => {
 
  {/* Sidebar Menu (Visible only on desktop) */}
 <div className="xl:block hidden h-[70vh]">
-  <ul className="space-y-4 mt-6 flex flex-col h-full text-[14px] font-semibold"> {/* Add flex and full height */}
+  <ul className="space-y-0 mt-6 flex flex-col h-full text-[14px] font-semibold"> {/* Add flex and full height */}
     {menuItems.slice(0, 5).map((item, index) => (  // Show first 5 items at the top
-      <li key={index} className="flex items-center space-x-3">
+      <li key={index} className="flex items-center space-x-3 hover:bg-blue-500 w-[200px] hover:text-white h-[40px] rounded-md">
+        <div className="flex justify-center items-center gap-3">
         <img
           src={item.icon}
           alt={item.name}
-          className="w-6 h-6"
+          className="w-6 h-6 hover:fill-white ml-3"
         />
         <Link to={item.path} className="">
           {item.name}
         </Link>
+        </div>
+       
       </li>
     ))}
    
   </ul>
 
-  <div className=" "> {/* This div ensures the last items are pushed to the bottom */}
-      {menuItems.slice(5).map((item, index) => (  // Show last two items at the bottom
-        <li key={index} className="flex items-center space-y-3 space-x-3  text-[14px] font-semibold">
-          <img
-            src={item.icon}
-            alt={item.name}
-            className="w-6 h-6"
-          />
-          <Link to={item.path} className="">
-            {item.name}
-          </Link>
-        </li>
-      ))}
+  <div className="-mt-5"> {/* This div ensures the last items are pushed to the bottom */}
+  {menuItems.slice(5).map((item, index) => (  // Show last two items at the bottom
+  <li key={index} className="flex items-center space-x-3 w-[200px] h-[40px] rounded-md hover:bg-blue-600 hover:text-white font-semibold text-[14px]">
+    <div className="flex items-center space-x-3 w-full h-full">
+      <img
+        src={item.icon}
+        alt={item.name}
+        className="w-6 h-6 ml-3 hover:fill-white"
+      />
+      <Link to={item.path} className="hover:text-white">
+        {item.name}
+      </Link>
+    </div>
+  </li>
+))}
     </div>
 </div>
-
 
       </div>
     </aside>

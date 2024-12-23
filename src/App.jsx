@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import ConditionalNav from './components/ConditionalNav';
+import SignIn from './components/SignIn';
 import RepositoryPage from './RepositoryPage';
 
 function App() {
   return (
     <Router>
       <div className="">
-        <ConditionalNav />
+        <SignIn />
         <Routes>
           <Route path="/dashboard" element={<RepositoryPage />} />
         </Routes>

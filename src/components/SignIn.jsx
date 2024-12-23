@@ -8,7 +8,7 @@ import logo from '/assets/logo.svg';
 import pie from '/assets/pie.svg';
 import arrow from '/assets/arrow.svg';
 import signupInfo from '../data/signupInfo';
-function ConditionalNav() {
+function SignIn() {
   const [selectedType, setSelectedType] = useState('SAAS');
   const location = useLocation();
 
@@ -26,13 +26,13 @@ function ConditionalNav() {
       <div className="w-[50vw] h-screen relative hidden xl:block">
 
        <div className="absolute top-56  left-32">
-        <div className="w-[447px] h-[150px] bg-white shadow-xl shadow-gray-300 rounded-3xl border-2 border-gray-200">
+        <div className="w-[447px] h-[170px] bg-white shadow-xl shadow-gray-300 rounded-3xl border-2 border-gray-200">
           <div className='flex items-center px-4 py-3 border-b-2 border-gray-200'>
           <img src={logo} alt="logo" className="w-8 h-6"/>
           <p className=' text-md font-bold'>AI to detect & Autofix Bad Code</p>
           </div>
 
-          <div className='flex items-center px-4 py-2 gap-9 justify-center text-[14px]'>
+          <div className='flex items-center mt-4 px-4 py-2 gap-9 justify-center text-[14px]'>
             {signupInfo.slice(0,-1).map((info, index) => (
               <div className="flex flex-col mt-2" key={index}>
               <span className='mx-auto font-extrabold'>{info.metric}</span>
@@ -43,7 +43,7 @@ function ConditionalNav() {
         </div>
        </div>
 
-       <div className="absolute top-[350px]  left-80">
+       <div className="absolute top-[370px]  left-80">
         <div className="w-[270px] h-[164px] bg-white rounded-3xl border-2 border-gray-200 shadow-xl shadow-gray-300">
           <div className="flex items-center justify-between px-5 py-3 ">
 
@@ -135,4 +135,4 @@ function ConditionalNav() {
   );
 }
 
-export default ConditionalNav
+export default SignIn
