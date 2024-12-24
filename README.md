@@ -2,7 +2,7 @@
 
 ## Live link : https://codeant-assignment-inky.vercel.app/
 
-This assignment is built using React.js and TailwindCSS for styling. It has the UI implementation of signin and dashboard screen. 
+This assignment is built using React.js and TailwindCSS for styling. It has the UI implementation of signin and dashboard screen. First, you will see the signup screen then click on any of the sign in option to get redirected to the dashboard page.
 
 Signin screen : https://codeant-assignment-inky.vercel.app
 
