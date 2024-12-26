@@ -23,9 +23,11 @@ function SignIn() {
   return (
     <div className="w-auto h-auto flex ">
 
-      <div className="w-[50vw] h-screen relative hidden xl:block">
+      <div className="w-[50vw] h-screen hidden xl:block  relative">
 
-       <div className="absolute top-56  left-32">
+      <div className=" w-[474px] h-[322px]  absolute top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 ">
+
+      <div className="">
         <div className="w-[447px] h-[170px] bg-white shadow-xl shadow-gray-300 rounded-3xl border-2 border-gray-200">
           <div className='flex items-center px-4 py-3 border-b-2 border-gray-200'>
           <img src={logo} alt="logo" className="w-8 h-6"/>
@@ -43,7 +45,7 @@ function SignIn() {
         </div>
        </div>
 
-       <div className="absolute top-[370px]  left-80">
+       <div className="absolute top-32 left-52 ">
         <div className="w-[270px] h-[164px] bg-white rounded-3xl border-2 border-gray-200 shadow-xl shadow-gray-300">
           <div className="flex items-center justify-between px-5 py-3 ">
 
@@ -60,7 +62,7 @@ function SignIn() {
 
           </div>
 
-         {/* render lisr */}
+         {/* render list */}
          {
         signupInfo.slice(-1).map((info, index) => (
             <div className=" text-[16px] font-bold ml-4" key={index}>
@@ -71,7 +73,11 @@ function SignIn() {
         }       
         </div>       
        </div>
+
+      </div>
+
        <img src={subtract} alt="substract" className="absolute bottom-0 left-0 w-64"/>
+
       </div>
 
 
